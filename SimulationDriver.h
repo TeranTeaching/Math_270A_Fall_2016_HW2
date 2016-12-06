@@ -190,6 +190,7 @@ public:
       v_n(i)=(T)0;
     }
     //intialize mass lumped mass matrix from density
+    mass=TVect::Zero(N);
     for(int e=0;e<N-1;e++){
       mass(e)+=(T).5*rho*dX;
       mass(e+1)+=(T).5*rho*dX;}
